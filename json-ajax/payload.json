@@ -1,0 +1,11 @@
+{
+    "name": "John",
+    "age": 24,
+    "bankBal": 500.45,
+    "isGovtEmp": false,
+    "address": {
+        "street": "123 Main St",
+        "city": "Boston"
+    },
+    "cars": ["Ford", "BMW", "Fiat"]
+}

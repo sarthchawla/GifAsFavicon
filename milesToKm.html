@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <style>
+        #container {
+            height: 400px;
+            width: 400px;
+            border: 2px dashed black;
+        }
+
+        #head {
+            color: rgb(68, 4, 42);
+            text-align: center;
+
+        }
+
+        input {
+            height: 50px;
+            width: 100px;
+            text-align: center;
+            color: rgb(234, 240, 238);
+            background-color: rgb(33, 36, 35);
+            margin-top: 50px;
+            margin-left: 20px;
+
+        }
+
+        #btn {
+            margin-top: 20px;
+            margin-left: 170px;
+            font-size: large;
+            color: rgb(214, 202, 205);
+            background-color: rgb(192, 145, 236);
+            padding: 10px;
+            border-radius: 50px;
+
+        }
+
+        #btn:hover {
+            scale: 1.1;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>##
+    <div id="container">
+        <h1 id="head">Mile To KM Conversion</h1>
+        <h3><span id="error"></span></h3>
+        <hr>
+        Mile:<input id="Mile" type="text">
+        KM:<input id="km" type="text"><br>
+        <button id="btn">Submit</button>
+
+    </div>
+
+
+</body>
+<script>
+    let mile = document.getElementById("Mile")
+    let km = document.getElementById("km")
+    let error = document.getElementById("error")
+    let sub = document.getElementById("btn")
+    sub.addEventListener("click", function () {
+        if (mile.value === km.value) {
+            error.innerText = "please enter the value"
+        }
+        else {
+            error.innerText = ""
+            km.value = mile.value * 1.609344
+        }
+
+    });
+</script>
+
+</html>
